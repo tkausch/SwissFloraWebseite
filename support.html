@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwissFlora — Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Language Switcher ── -->
+  <div class="lang-switcher" role="navigation" aria-label="Language / Langue / Sprache">
+    <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">DE</button>
+    <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+  </div>
+
+  <!-- ── Page Header ── -->
+  <header class="policy-header">
+    <a href="index.html" class="policy-back" data-i18n="back">← Zurück</a>
+    <div class="policy-header-inner">
+      <div class="badge" data-i18n="badge">App für iPhone</div>
+      <h1>Swiss<em>Flora</em></h1>
+      <p class="policy-subtitle" data-i18n="subtitle">Support</p>
+    </div>
+  </header>
+
+  <!-- ── Content ── -->
+  <main class="policy-main">
+    <div class="policy-content">
+
+      <!-- Intro -->
+      <section class="policy-section">
+        <div class="section-label" data-i18n="s1-label">Kontakt</div>
+        <h2 data-i18n="s1-h2">Wie können wir helfen?</h2>
+        <p data-i18n="s1-p">Hast du eine Frage zur App, einen Fehler entdeckt oder ein Anliegen zum Datenschutz? Fülle das Formular aus — wir melden uns so schnell wie möglich.</p>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="policy-section">
+        <form class="contact-form" id="contactForm">
+
+          <div class="form-row">
+            <label for="name" data-i18n="field-name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" data-i18n-placeholder="placeholder-name" placeholder="Dein Name">
+          </div>
+
+          <div class="form-row">
+            <label for="email" data-i18n="field-email">E-Mail</label>
+            <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="placeholder-email" placeholder="deine@email.com">
+          </div>
+
+          <div class="form-row">
+            <label for="subject" data-i18n="field-subject">Betreff</label>
+            <select id="subject" name="subject">
+              <option value="support" data-i18n="opt-support">App-Support</option>
+              <option value="privacy" data-i18n="opt-privacy">Datenschutz</option>
+              <option value="feedback" data-i18n="opt-feedback">Feedback</option>
+              <option value="other" data-i18n="opt-other">Sonstiges</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message" data-i18n="field-message">Nachricht</label>
+            <textarea id="message" name="message" rows="6" required data-i18n-placeholder="placeholder-message" placeholder="Beschreibe dein Anliegen..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            <span data-i18n="btn-submit">Nachricht senden</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p><strong>SwissFlora</strong> — <span data-i18n="footer-tagline">Die Schweizer Flora in deiner Tasche</span></p>
+    <p>© 2025 SwissFlora &nbsp;·&nbsp; <a href="privacy.html" data-i18n="footer-privacy">Datenschutz</a></p>
+  </footer>
+
+  <!-- ── i18n + form ── -->
+  <script>
+    const translations = {
+      de: {
+        'badge':    'App für iPhone',
+        'back':     '← Zurück',
+        'subtitle': 'Support',
+
+        's1-label': 'Kontakt',
+        's1-h2':    'Wie können wir helfen?',
+        's1-p':     'Hast du eine Frage zur App, einen Fehler entdeckt oder ein Anliegen zum Datenschutz? Fülle das Formular aus — wir melden uns so schnell wie möglich.',
+
+        'field-name':    'Name',
+        'field-email':   'E-Mail',
+        'field-subject': 'Betreff',
+        'field-message': 'Nachricht',
+
+        'placeholder-name':    'Dein Name',
+        'placeholder-email':   'deine@email.com',
+        'placeholder-message': 'Beschreibe dein Anliegen …',
+
+        'opt-support':  'App-Support',
+        'opt-privacy':  'Datenschutz',
+        'opt-feedback': 'Feedback',
+        'opt-other':    'Sonstiges',
+
+        'btn-submit': 'Nachricht senden',
+
+        'footer-tagline': 'Die Schweizer Flora in deiner Tasche',
+        'footer-privacy': 'Datenschutz',
+      },
+
+      fr: {
+        'badge':    'App pour iPhone',
+        'back':     '← Retour',
+        'subtitle': 'Support',
+
+        's1-label': 'Contact',
+        's1-h2':    'Comment pouvons-nous vous aider ?',
+        's1-p':     "Vous avez une question sur l'application, découvert un bug ou une question de confidentialité ? Remplissez le formulaire — nous vous répondrons dans les plus brefs délais.",
+
+        'field-name':    'Nom',
+        'field-email':   'E-mail',
+        'field-subject': 'Sujet',
+        'field-message': 'Message',
+
+        'placeholder-name':    'Votre nom',
+        'placeholder-email':   'votre@email.com',
+        'placeholder-message': 'Décrivez votre demande …',
+
+        'opt-support':  'Support application',
+        'opt-privacy':  'Confidentialité',
+        'opt-feedback': 'Retour d\'expérience',
+        'opt-other':    'Autre',
+
+        'btn-submit': 'Envoyer le message',
+
+        'footer-tagline': 'La flore suisse dans votre poche',
+        'footer-privacy': 'Confidentialité',
+      },
+
+      en: {
+        'badge':    'App for iPhone',
+        'back':     '← Back',
+        'subtitle': 'Support',
+
+        's1-label': 'Contact',
+        's1-h2':    'How can we help?',
+        's1-p':     'Have a question about the app, found a bug, or have a privacy concern? Fill in the form and we\'ll get back to you as soon as possible.',
+
+        'field-name':    'Name',
+        'field-email':   'Email',
+        'field-subject': 'Subject',
+        'field-message': 'Message',
+
+        'placeholder-name':    'Your name',
+        'placeholder-email':   'you@email.com',
+        'placeholder-message': 'Describe your enquiry …',
+
+        'opt-support':  'App support',
+        'opt-privacy':  'Privacy',
+        'opt-feedback': 'Feedback',
+        'opt-other':    'Other',
+
+        'btn-submit': 'Send message',
+
+        'footer-tagline': 'Swiss flora in your pocket',
+        'footer-privacy': 'Privacy',
+      }
+    };
+
+    const pageTitles = {
+      de: 'SwissFlora — Support',
+      fr: 'SwissFlora — Support',
+      en: 'SwissFlora — Support',
+    };
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      if (!t) return;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] !== undefined) el.placeholder = t[key];
+      });
+
+      document.title = pageTitles[lang] || pageTitles.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+        btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+      });
+
+      try { localStorage.setItem('sf-lang', lang); } catch (_) {}
+    }
+
+    // Form submission via mailto
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject');
+      const subjectText = subject.options[subject.selectedIndex].text;
+      const message = document.getElementById('message').value.trim();
+
+      const body = [
+        name    ? 'Name: ' + name    : '',
+        email   ? 'Email: ' + email  : '',
+        '',
+        message
+      ].filter(Boolean).join('\n');
+
+      window.location.href =
+        'mailto:thomas@kausch.li'
+        + '?subject=' + encodeURIComponent('[SwissFlora] ' + subjectText)
+        + '&body='    + encodeURIComponent(body);
+    });
+
+    (function () {
+      let saved;
+      try { saved = localStorage.getItem('sf-lang'); } catch (_) {}
+      const browserLang = (navigator.language || 'de').slice(0, 2).toLowerCase();
+      const valid = ['de', 'fr', 'en'];
+      const lang = valid.includes(saved) ? saved
+                 : valid.includes(browserLang) ? browserLang
+                 : 'de';
+      setLanguage(lang);
+    })();
+  </script>
+
+</body>
+</html>
