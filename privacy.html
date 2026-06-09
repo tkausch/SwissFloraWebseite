@@ -419,11 +419,13 @@
     }
 
     (function () {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
       let saved;
       try { saved = localStorage.getItem('sf-lang'); } catch (_) {}
       const browserLang = (navigator.language || 'de').slice(0, 2).toLowerCase();
       const valid = ['de', 'fr', 'en'];
-      const lang = valid.includes(saved) ? saved
+      const lang = valid.includes(urlLang)    ? urlLang
+                 : valid.includes(saved)      ? saved
                  : valid.includes(browserLang) ? browserLang
                  : 'de';
       setLanguage(lang);
