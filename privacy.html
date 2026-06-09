@@ -55,7 +55,7 @@
           </div>
           <div class="summary-item summary-amber">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <span data-i18n="sum-4">Für die KI-Pflanzenbestimmung wird dein Foto an InfoFlora übermittelt — nur auf deine aktive Anfrage hin.</span>
+            <span data-i18n="sum-4">Für die KI-Pflanzenbestimmung werden dein Foto und dein GPS-Standort an InfoFlora übermittelt — nur auf deine aktive Anfrage hin.</span>
           </div>
         </div>
       </section>
@@ -67,7 +67,6 @@
         <p data-i18n="s3-p1">SwissFlora erhebt, speichert und verarbeitet keine persönlichen Daten. Die App verzichtet vollständig auf die Erfassung von:</p>
         <ul data-i18n-list="s3-list">
           <li data-i18n="s3-li1">Name, E-Mail-Adresse oder sonstige Kontodaten</li>
-          <li data-i18n="s3-li2">Standort- oder GPS-Daten</li>
           <li data-i18n="s3-li3">Nutzungsstatistiken oder Analysedaten</li>
           <li data-i18n="s3-li4">Gerätekennungen oder Werbe-IDs</li>
           <li data-i18n="s3-li5">Abstürze oder Diagnosedaten</li>
@@ -82,8 +81,9 @@
         <p data-i18n="s4-p2">Dabei gilt:</p>
         <ul>
           <li data-i18n="s4-li1">Die Übermittlung erfolgt ausschliesslich auf deine aktive Anfrage hin.</li>
-          <li data-i18n="s4-li2">Es wird nur das Foto übermittelt — keine Standortdaten, keine Identifikationsdaten.</li>
-          <li data-i18n="s4-li3">Das Foto wird nach der Analyse nicht von InfoFlora gespeichert.</li>
+          <li data-i18n="s4-li2">Zusammen mit dem Foto wird dein aktueller GPS-Standort an den InfoFlora-REST-Dienst übermittelt, um die Erkennungswahrscheinlichkeit zu verbessern.</li>
+          <li data-i18n="s4-li5">Es werden keine weiteren personenbezogenen Daten übermittelt.</li>
+          <li data-i18n="s4-li3">Das Foto und der Standort werden nach der Analyse nicht von InfoFlora gespeichert.</li>
           <li data-i18n="s4-li4">InfoFlora ist eine gemeinnützige, staatlich anerkannte Organisation mit Sitz in der Schweiz.</li>
         </ul>
         <p data-i18n="s4-p3">Für die Datenschutzpraktiken von InfoFlora verweisen wir auf deren Datenschutzrichtlinien unter <a href="https://www.infoflora.ch" target="_blank" rel="noopener">www.infoflora.ch</a>.</p>
@@ -105,6 +105,18 @@
             <p data-i18n="perm-camera-desc">Wird ausschliesslich für die KI-Pflanzenbestimmung verwendet. Die Kamera wird nur aktiviert, wenn du die Erkennungsfunktion aktiv startest. Fotos werden nicht automatisch gespeichert oder verarbeitet.</p>
           </div>
         </div>
+        <div class="permission-card" style="margin-top:0.75rem">
+          <div class="permission-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <strong data-i18n="perm-location-title">Standort (GPS)</strong>
+            <p data-i18n="perm-location-desc">Wird ausschliesslich für die KI-Pflanzenbestimmung verwendet. Der GPS-Standort wird zusammen mit dem Foto an den InfoFlora-REST-Dienst übermittelt, um die Erkennungswahrscheinlichkeit zu verbessern. Eine dauerhafte Standortüberwachung findet nicht statt.</p>
+          </div>
+        </div>
       </section>
 
       <!-- 6 Offline -->
@@ -118,7 +130,7 @@
       <section class="policy-section">
         <div class="section-label" data-i18n="s7-label">Datenweitergabe</div>
         <h2 data-i18n="s7-h2">Werden Daten an Dritte weitergegeben?</h2>
-        <p data-i18n="s7-p">Mit Ausnahme der Weiterleitung von Fotos an InfoFlora für die KI-Erkennung (ausschliesslich auf deine aktive Anfrage) werden keinerlei Daten an Dritte weitergegeben, verkauft oder vermietet.</p>
+        <p data-i18n="s7-p">Mit Ausnahme der Übermittlung von Foto und GPS-Standort an InfoFlora für die KI-Pflanzenbestimmung (ausschliesslich auf deine aktive Anfrage) werden keinerlei Daten an Dritte weitergegeben, verkauft oder vermietet.</p>
       </section>
 
       <!-- 8 Kinder -->
@@ -175,7 +187,7 @@
         'sum-1': 'SwissFlora erhebt keine persönlichen Daten.',
         'sum-2': 'Kein Tracking, keine Werbung, keine Analysen.',
         'sum-3': 'Datenbank und Illustrationen sind vollständig offline verfügbar.',
-        'sum-4': 'Für die KI-Pflanzenbestimmung wird dein Foto an InfoFlora übermittelt — nur auf deine aktive Anfrage hin.',
+        'sum-4': 'Für die KI-Pflanzenbestimmung werden dein Foto und dein GPS-Standort an InfoFlora übermittelt — nur auf deine aktive Anfrage hin.',
 
         's2-label': 'Überblick',
         's2-h2':    'Kurz zusammengefasst',
@@ -184,7 +196,6 @@
         's3-h2':    'Welche Daten werden erhoben?',
         's3-p1':    'SwissFlora erhebt, speichert und verarbeitet keine persönlichen Daten. Die App verzichtet vollständig auf die Erfassung von:',
         's3-li1':   'Name, E-Mail-Adresse oder sonstige Kontodaten',
-        's3-li2':   'Standort- oder GPS-Daten',
         's3-li3':   'Nutzungsstatistiken oder Analysedaten',
         's3-li4':   'Gerätekennungen oder Werbe-IDs',
         's3-li5':   'Abstürze oder Diagnosedaten',
@@ -194,15 +205,18 @@
         's4-p1':    'Wenn du die KI-Erkennungsfunktion aktiv verwendest, wird das von dir aufgenommene Foto zur Bestimmung an InfoFlora — das nationale Daten- und Informationszentrum der Schweizer Flora — übermittelt.',
         's4-p2':    'Dabei gilt:',
         's4-li1':   'Die Übermittlung erfolgt ausschliesslich auf deine aktive Anfrage hin.',
-        's4-li2':   'Es wird nur das Foto übermittelt — keine Standortdaten, keine Identifikationsdaten.',
-        's4-li3':   'Das Foto wird nach der Analyse nicht von InfoFlora gespeichert.',
+        's4-li2':   'Zusammen mit dem Foto wird dein aktueller GPS-Standort an den InfoFlora-REST-Dienst übermittelt, um die Erkennungswahrscheinlichkeit zu verbessern.',
+        's4-li5':   'Es werden keine weiteren personenbezogenen Daten übermittelt.',
+        's4-li3':   'Das Foto und der Standort werden nach der Analyse nicht von InfoFlora gespeichert.',
         's4-li4':   'InfoFlora ist eine gemeinnützige, staatlich anerkannte Organisation mit Sitz in der Schweiz.',
         's4-p3':    'Für die Datenschutzpraktiken von InfoFlora verweisen wir auf deren Datenschutzrichtlinien.',
 
-        's5-label':           'App-Berechtigungen',
-        's5-h2':              'Welche Berechtigungen benötigt die App?',
-        'perm-camera-title':  'Kamera',
-        'perm-camera-desc':   'Wird ausschliesslich für die KI-Pflanzenbestimmung verwendet. Die Kamera wird nur aktiviert, wenn du die Erkennungsfunktion aktiv startest. Fotos werden nicht automatisch gespeichert oder verarbeitet.',
+        's5-label':            'App-Berechtigungen',
+        's5-h2':               'Welche Berechtigungen benötigt die App?',
+        'perm-camera-title':   'Kamera',
+        'perm-camera-desc':    'Wird ausschliesslich für die KI-Pflanzenbestimmung verwendet. Die Kamera wird nur aktiviert, wenn du die Erkennungsfunktion aktiv startest. Fotos werden nicht automatisch gespeichert oder verarbeitet.',
+        'perm-location-title': 'Standort (GPS)',
+        'perm-location-desc':  'Wird ausschliesslich für die KI-Pflanzenbestimmung verwendet. Der GPS-Standort wird zusammen mit dem Foto an den InfoFlora-REST-Dienst übermittelt, um die Erkennungswahrscheinlichkeit zu verbessern. Eine dauerhafte Standortüberwachung findet nicht statt.',
 
         's6-label': 'Offline-Nutzung',
         's6-h2':    'Was funktioniert ohne Internetverbindung?',
@@ -210,7 +224,7 @@
 
         's7-label': 'Datenweitergabe',
         's7-h2':    'Werden Daten an Dritte weitergegeben?',
-        's7-p':     'Mit Ausnahme der Weiterleitung von Fotos an InfoFlora für die KI-Erkennung (ausschliesslich auf deine aktive Anfrage) werden keinerlei Daten an Dritte weitergegeben, verkauft oder vermietet.',
+        's7-p':     'Mit Ausnahme der Übermittlung von Foto und GPS-Standort an InfoFlora für die KI-Pflanzenbestimmung (ausschliesslich auf deine aktive Anfrage) werden keinerlei Daten an Dritte weitergegeben, verkauft oder vermietet.',
 
         's8-label': 'Kinder',
         's8-h2':    'Eignung für Kinder',
@@ -242,7 +256,7 @@
         'sum-1': "SwissFlora ne collecte aucune donnée personnelle.",
         'sum-2': "Pas de tracking, pas de publicité, pas d'analyses.",
         'sum-3': "La base de données et les illustrations sont entièrement disponibles hors ligne.",
-        'sum-4': "Pour la reconnaissance IA des plantes, votre photo est transmise à InfoFlora — uniquement sur votre demande active.",
+        'sum-4': "Pour la reconnaissance IA des plantes, votre photo et votre position GPS sont transmises à InfoFlora — uniquement sur votre demande active.",
 
         's2-label': 'Vue d\'ensemble',
         's2-h2':    'En bref',
@@ -251,7 +265,6 @@
         's3-h2':    'Quelles données sont collectées ?',
         's3-p1':    "SwissFlora ne collecte, ne stocke et ne traite aucune donnée personnelle. L'application renonce entièrement à la saisie de :",
         's3-li1':   "Nom, adresse e-mail ou autres données de compte",
-        's3-li2':   "Données de localisation ou GPS",
         's3-li3':   "Statistiques d'utilisation ou données d'analyse",
         's3-li4':   "Identifiants d'appareils ou identifiants publicitaires",
         's3-li5':   "Données de plantage ou de diagnostic",
@@ -261,15 +274,18 @@
         's4-p1':    "Lorsque vous utilisez activement la fonction de reconnaissance IA, la photo que vous avez prise est transmise à InfoFlora — le centre national de données et d'information sur la flore suisse — pour identification.",
         's4-p2':    'Les conditions suivantes s\'appliquent :',
         's4-li1':   "La transmission a lieu exclusivement sur votre demande active.",
-        's4-li2':   "Seule la photo est transmise — aucune donnée de localisation, aucune donnée d'identification.",
-        's4-li3':   "La photo n'est pas conservée par InfoFlora après l'analyse.",
+        's4-li2':   "En plus de la photo, votre position GPS actuelle est transmise au service REST d'InfoFlora afin d'améliorer la probabilité d'identification.",
+        's4-li5':   "Aucune autre donnée personnelle n'est transmise.",
+        's4-li3':   "La photo et la position ne sont pas conservées par InfoFlora après l'analyse.",
         's4-li4':   "InfoFlora est une organisation à but non lucratif, reconnue d'utilité publique, basée en Suisse.",
         's4-p3':    "Pour les pratiques de confidentialité d'InfoFlora, veuillez consulter leur politique de confidentialité sur www.infoflora.ch.",
 
-        's5-label':           'Autorisations',
-        's5-h2':              "Quelles autorisations l'application requiert-elle ?",
-        'perm-camera-title':  'Appareil photo',
-        'perm-camera-desc':   "Utilisé exclusivement pour la reconnaissance IA des plantes. L'appareil photo n'est activé que lorsque vous lancez activement la fonction de reconnaissance. Les photos ne sont pas enregistrées ni traitées automatiquement.",
+        's5-label':            'Autorisations',
+        's5-h2':               "Quelles autorisations l'application requiert-elle ?",
+        'perm-camera-title':   'Appareil photo',
+        'perm-camera-desc':    "Utilisé exclusivement pour la reconnaissance IA des plantes. L'appareil photo n'est activé que lorsque vous lancez activement la fonction de reconnaissance. Les photos ne sont pas enregistrées ni traitées automatiquement.",
+        'perm-location-title': 'Localisation (GPS)',
+        'perm-location-desc':  "Utilisée exclusivement pour la reconnaissance IA des plantes. La position GPS est transmise avec la photo au service REST d'InfoFlora pour améliorer la probabilité d'identification. Aucune surveillance continue de la localisation n'est effectuée.",
 
         's6-label': 'Utilisation hors ligne',
         's6-h2':    'Que fonctionne sans connexion internet ?',
@@ -277,7 +293,7 @@
 
         's7-label': 'Partage des données',
         's7-h2':    'Les données sont-elles partagées avec des tiers ?',
-        's7-p':     "À l'exception de la transmission de photos à InfoFlora pour la reconnaissance IA (exclusivement sur votre demande active), aucune donnée n'est partagée, vendue ou louée à des tiers.",
+        's7-p':     "À l'exception de la transmission de la photo et de la position GPS à InfoFlora pour la reconnaissance IA des plantes (exclusivement sur votre demande active), aucune donnée n'est partagée, vendue ou louée à des tiers.",
 
         's8-label': 'Enfants',
         's8-h2':    'Convient-il aux enfants ?',
@@ -309,59 +325,61 @@
         'sum-1': 'SwissFlora collects no personal data.',
         'sum-2': 'No tracking, no advertising, no analytics.',
         'sum-3': 'Database and illustrations are fully available offline.',
-        'sum-4': 'For AI plant identification, your photo is sent to InfoFlora — only when you actively request it.',
+        'sum-4': 'For AI plant identification, your photo and GPS location are sent to InfoFlora — only when you actively request it.',
 
         's2-label': 'Overview',
-        's2-h2':    'Summary',
+        's2-h2':    'At a Glance',
 
         's3-label': 'Data Collection',
         's3-h2':    'What data is collected?',
-        's3-p1':    'SwissFlora does not collect, store or process any personal data. The app does not capture any of the following:',
-        's3-li1':   'Name, email address or other account data',
-        's3-li2':   'Location or GPS data',
+        's3-p1':    'SwissFlora does not collect, store, or process any personal data. The app never captures any of the following:',
+        's3-li1':   'Name, email address, or other account information',
         's3-li3':   'Usage statistics or analytics data',
         's3-li4':   'Device identifiers or advertising IDs',
         's3-li5':   'Crash reports or diagnostic data',
 
         's4-label': 'Third-Party Services',
         's4-h2':    'AI Plant Identification via InfoFlora',
-        's4-p1':    'When you actively use the AI recognition feature, the photo you take is transmitted to InfoFlora — Switzerland\'s national data and information centre for Swiss flora — for identification.',
+        's4-p1':    'When you actively use the AI recognition feature, the photo you take is sent to InfoFlora — Switzerland\'s national data and information centre for Swiss flora — for identification.',
         's4-p2':    'The following conditions apply:',
-        's4-li1':   'Transmission occurs exclusively upon your active request.',
-        's4-li2':   'Only the photo is transmitted — no location data, no identification data.',
-        's4-li3':   'The photo is not retained by InfoFlora after analysis.',
+        's4-li1':   'Data is only transmitted when you explicitly trigger the recognition feature.',
+        's4-li2':   'Along with the photo, your current GPS location is sent to the InfoFlora REST service to improve the likelihood of a correct identification.',
+        's4-li5':   'No other personal data is transmitted.',
+        's4-li3':   'Neither the photo nor the location is retained by InfoFlora after analysis.',
         's4-li4':   'InfoFlora is a non-profit, publicly recognised organisation based in Switzerland.',
-        's4-p3':    'For InfoFlora\'s privacy practices, please refer to their privacy policy at www.infoflora.ch.',
+        's4-p3':    'For details on InfoFlora\'s privacy practices, please refer to their privacy policy at www.infoflora.ch.',
 
-        's5-label':           'App Permissions',
-        's5-h2':              'What permissions does the app require?',
-        'perm-camera-title':  'Camera',
-        'perm-camera-desc':   'Used exclusively for AI plant identification. The camera is only activated when you actively start the recognition feature. Photos are not automatically saved or processed.',
+        's5-label':            'App Permissions',
+        's5-h2':               'What permissions does the app require?',
+        'perm-camera-title':   'Camera',
+        'perm-camera-desc':    'Used exclusively for AI plant identification. The camera is activated only when you explicitly start the recognition feature. Photos are not saved or processed automatically.',
+        'perm-location-title': 'Location (GPS)',
+        'perm-location-desc':  'Used exclusively for AI plant identification. Your GPS location is sent alongside your photo to the InfoFlora REST service to improve identification accuracy. The app does not track your location continuously or in the background.',
 
         's6-label': 'Offline Use',
         's6-h2':    'What works without an internet connection?',
-        's6-p':     'The taxon database with over 2,500 species and all 170 botanical illustrations are stored fully locally on your device. No internet connection is required for these features, and no data is transmitted.',
+        's6-p':     'The taxon database covering more than 2,500 species and all 170 botanical illustrations are stored entirely on your device. No internet connection is needed to use these features, and no data is transmitted.',
 
         's7-label': 'Data Sharing',
         's7-h2':    'Is data shared with third parties?',
-        's7-p':     'With the exception of forwarding photos to InfoFlora for AI recognition (exclusively upon your active request), no data is shared, sold or rented to third parties.',
+        's7-p':     'The only data shared with a third party is the photo and GPS location sent to InfoFlora for AI plant identification — and only when you explicitly request it. No data is ever sold, rented, or shared for any other purpose.',
 
         's8-label': 'Children',
         's8-h2':    'Suitability for Children',
-        's8-p':     'SwissFlora is suitable for all age groups. As the app does not collect or store any personal data, there are no particular privacy concerns regarding use by children.',
+        's8-p':     'SwissFlora is suitable for all age groups. Because the app does not collect or store personal data, there are no specific privacy concerns related to use by children.',
 
         's9-label': 'Your Rights',
-        's9-h2':    'What are your rights?',
-        's9-p1':    'Since SwissFlora does not collect personal data, there is no data you can access, correct or request deletion of. For questions, contact us at thomas@kausch.li.',
-        's9-p2':    'Users residing in Switzerland or the EU may also contact the relevant data protection authority.',
+        's9-h2':    'Your Rights',
+        's9-p1':    'Because SwissFlora does not collect personal data, there is nothing to access, correct, or delete. If you have any privacy-related questions, please reach out to us at thomas@kausch.li.',
+        's9-p2':    'Users based in Switzerland or the EU may also contact their local data protection authority.',
 
         's10-label': 'Changes',
         's10-h2':    'Changes to this Privacy Policy',
-        's10-p':     'We reserve the right to update this privacy policy as needed. The current version is always available on this page. Users will be informed of significant changes via an app update.',
+        's10-p':     'We may update this privacy policy from time to time. The latest version will always be available on this page. You will be notified of any significant changes through an app update.',
 
         's11-label': 'Contact',
-        's11-h2':    'Questions about privacy?',
-        's11-p':     'For questions, comments or concerns about privacy, contact us at:',
+        's11-h2':    'Privacy questions?',
+        's11-p':     'If you have any questions, comments, or concerns about this privacy policy, please contact us:',
 
         'footer-tagline': 'Swiss flora in your pocket',
         'footer-privacy': 'Privacy',
